@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import { Header } from './components/Header';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <section>
+      <Header />
+      <div className="content-wrapper">
+        <div className="mb-1">
+          <button className="btn btn-light rounded-pill border me-1">
+            <i className="bi bi-geo-alt-fill"></i>
+          </button>
+          Ho Chi Minh
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="content-wrapper">
+        <div className=" bg-body-tertiary p-3 rounded-3">
+          <b>
+            <small>Thời tiết hiện tại</small>
+          </b>
+          <div className="d-sm-flex gap-3 align-items-center">
+            <div>
+              <div className="d-flex gap-1 align-items-center display-1">
+                <img
+                  src="/assets/status/MostlySunnyDay.svg"
+                  alt=""
+                  style={{ height: '1.8em' }}
+                />
+                <b>28°C</b>
+              </div>
+            </div>
+
+            <div>
+              <b>Nhiều mây</b>
+              <br />
+              <small>Cảm thấy như 32°C</small>
+            </div>
+          </div>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </section>
+  );
 }
 
-export default App
+export default App;

@@ -1,4 +1,4 @@
-export function CurrentWeather() {
+export default function CurrentWeather() {
   return (
     <section>
       <div className="content-wrapper">

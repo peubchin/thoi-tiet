@@ -1,4 +1,4 @@
-export function Header() {
+export default function Header() {
   return (
     <section className="content-wrapper d-flex gap-1">
       <a className="flex-shrink-0 me-1" href="">
